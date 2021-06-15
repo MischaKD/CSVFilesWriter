@@ -15,3 +15,7 @@ with open('cars.csv') as file:
         make_model_list.append(make_model)
     print(make_model_list)
 
+with open('cars_make_model.csv', 'w') as file:
+    csv_writer = csv.writer(file)
+    for row in make_model_list:
+        csv_writer.writerow(row)
